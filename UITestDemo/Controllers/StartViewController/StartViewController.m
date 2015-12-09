@@ -1,22 +1,22 @@
 //
-//  ViewController.m
+//  StartViewController.m
 //  UITestDemo
 //
 //  Created by Oleg Vishnivetskiy on 09/12/15.
 //  Copyright © 2015 Oleg Vishnivetskiy. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "StartViewController.h"
 
-@interface ViewController ()
+@interface StartViewController ()
 
 @end
 
-@implementation ViewController
+@implementation StartViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

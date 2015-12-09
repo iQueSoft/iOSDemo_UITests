@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Constants.h"
 
 @interface UITestDemoUITests : XCTestCase
 
@@ -22,7 +23,9 @@
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-    [[[XCUIApplication alloc] init] launch];
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    app.launchArguments = @[kUseMockString];
+    [app launch];
     
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
 }
@@ -32,9 +35,44 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testCorrectLogin {
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"Login"] tap];
+    
+    XCUIElement *usernameTextField = app.textFields[@"UserName"];
+    [usernameTextField tap];
+    [usernameTextField typeText:kCorrectUserName];
+    
+    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    [passwordSecureTextField tap];
+    [passwordSecureTextField tap];
+    [passwordSecureTextField typeText:kPassword];
+    
+    [app.buttons[@"EnterLogin"] tap];
+    
+    [[[[[[XCUIApplication alloc] init].navigationBars[@"Welcome"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
+
+- (void) testIncorrectCorrectLogin {
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"Login"] tap];
+    
+    XCUIElement *usernameTextField = app.textFields[@"UserName"];
+    [usernameTextField tap];
+    [usernameTextField typeText:kIncorrectUserName];
+    
+    XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    [passwordSecureTextField tap];
+    [passwordSecureTextField tap];
+    [passwordSecureTextField typeText:kPassword];
+    
+    [app.buttons[@"EnterLogin"] tap];
+    [app.alerts[@"Sorry!"].collectionViews.buttons[@"Ok"] tap];
+    
+    [[[[[[XCUIApplication alloc] init].navigationBars[@"Login"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
+}
+
 
 @end

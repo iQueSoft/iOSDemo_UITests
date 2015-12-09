@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		146342C71C18637100BED3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 146342C61C18637100BED3D5 /* main.m */; };
 		146342CA1C18637100BED3D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 146342C91C18637100BED3D5 /* AppDelegate.m */; };
-		146342CD1C18637100BED3D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146342CC1C18637100BED3D5 /* ViewController.m */; };
 		146342D01C18637100BED3D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146342CE1C18637100BED3D5 /* Main.storyboard */; };
 		146342D21C18637100BED3D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146342D11C18637100BED3D5 /* Assets.xcassets */; };
 		146342D51C18637100BED3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146342D31C18637100BED3D5 /* LaunchScreen.storyboard */; };
 		146342E01C18637100BED3D5 /* UITestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 146342DF1C18637100BED3D5 /* UITestDemoUITests.m */; };
+		146342EC1C18652700BED3D5 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146342EB1C18652700BED3D5 /* StartViewController.m */; };
+		146342EF1C18674F00BED3D5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146342EE1C18674F00BED3D5 /* LoginViewController.m */; };
+		146342F41C186A0D00BED3D5 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146342F31C186A0D00BED3D5 /* WelcomeViewController.m */; };
+		146342F81C186C9600BED3D5 /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 146342F71C186C9600BED3D5 /* ParseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +34,6 @@
 		146342C61C18637100BED3D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		146342C81C18637100BED3D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		146342C91C18637100BED3D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		146342CB1C18637100BED3D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		146342CC1C18637100BED3D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		146342CF1C18637100BED3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		146342D11C18637100BED3D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		146342D41C18637100BED3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,15 @@
 		146342DB1C18637100BED3D5 /* UITestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146342DF1C18637100BED3D5 /* UITestDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITestDemoUITests.m; sourceTree = "<group>"; };
 		146342E11C18637100BED3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146342EA1C18652700BED3D5 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartViewController.h; path = Controllers/StartViewController/StartViewController.h; sourceTree = "<group>"; };
+		146342EB1C18652700BED3D5 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartViewController.m; path = Controllers/StartViewController/StartViewController.m; sourceTree = "<group>"; };
+		146342ED1C18674F00BED3D5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controllers/LoginViewController/LoginViewController.h; sourceTree = "<group>"; };
+		146342EE1C18674F00BED3D5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/LoginViewController/LoginViewController.m; sourceTree = "<group>"; };
+		146342F21C186A0D00BED3D5 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = Controllers/WelcomeViewController/WelcomeViewController.h; sourceTree = "<group>"; };
+		146342F31C186A0D00BED3D5 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = Controllers/WelcomeViewController/WelcomeViewController.m; sourceTree = "<group>"; };
+		146342F61C186C9600BED3D5 /* ParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseManager.h; sourceTree = "<group>"; };
+		146342F71C186C9600BED3D5 /* ParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseManager.m; sourceTree = "<group>"; };
+		146342FA1C186D6700BED3D5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +93,11 @@
 			children = (
 				146342C81C18637100BED3D5 /* AppDelegate.h */,
 				146342C91C18637100BED3D5 /* AppDelegate.m */,
-				146342CB1C18637100BED3D5 /* ViewController.h */,
-				146342CC1C18637100BED3D5 /* ViewController.m */,
+				146342F11C18675C00BED3D5 /* StartViewController */,
+				146342F01C18675500BED3D5 /* LoginViewController */,
+				146342F51C186A1700BED3D5 /* WelcomeViewController */,
+				146342F91C186CA000BED3D5 /* ParseManager */,
+				146342FA1C186D6700BED3D5 /* Constants.h */,
 				146342CE1C18637100BED3D5 /* Main.storyboard */,
 				146342D11C18637100BED3D5 /* Assets.xcassets */,
 				146342D31C18637100BED3D5 /* LaunchScreen.storyboard */,
@@ -109,6 +122,42 @@
 				146342E11C18637100BED3D5 /* Info.plist */,
 			);
 			path = UITestDemoUITests;
+			sourceTree = "<group>";
+		};
+		146342F01C18675500BED3D5 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				146342ED1C18674F00BED3D5 /* LoginViewController.h */,
+				146342EE1C18674F00BED3D5 /* LoginViewController.m */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		146342F11C18675C00BED3D5 /* StartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				146342EA1C18652700BED3D5 /* StartViewController.h */,
+				146342EB1C18652700BED3D5 /* StartViewController.m */,
+			);
+			name = StartViewController;
+			sourceTree = "<group>";
+		};
+		146342F51C186A1700BED3D5 /* WelcomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				146342F21C186A0D00BED3D5 /* WelcomeViewController.h */,
+				146342F31C186A0D00BED3D5 /* WelcomeViewController.m */,
+			);
+			name = WelcomeViewController;
+			sourceTree = "<group>";
+		};
+		146342F91C186CA000BED3D5 /* ParseManager */ = {
+			isa = PBXGroup;
+			children = (
+				146342F61C186C9600BED3D5 /* ParseManager.h */,
+				146342F71C186C9600BED3D5 /* ParseManager.m */,
+			);
+			name = ParseManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				146342CD1C18637100BED3D5 /* ViewController.m in Sources */,
+				146342F41C186A0D00BED3D5 /* WelcomeViewController.m in Sources */,
+				146342EF1C18674F00BED3D5 /* LoginViewController.m in Sources */,
+				146342EC1C18652700BED3D5 /* StartViewController.m in Sources */,
+				146342F81C186C9600BED3D5 /* ParseManager.m in Sources */,
 				146342CA1C18637100BED3D5 /* AppDelegate.m in Sources */,
 				146342C71C18637100BED3D5 /* main.m in Sources */,
 			);
