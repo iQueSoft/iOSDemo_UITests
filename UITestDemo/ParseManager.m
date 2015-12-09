@@ -35,8 +35,7 @@
         
         // here should be login to the parse server
         
-        NSError *theError = [NSError errorWithDomain: @"Login Error" code: 1 userInfo: @{NSLocalizedDescriptionKey : @"The real login isn't implemented.\n This app just UI tests demo \n Check tests in UITestDemoUItests.m file"}];
-        
+        NSError *theError = [NSError errorWithDomain: @"Login Error" code: 1 userInfo: @{NSLocalizedDescriptionKey : @"The real login isn't implemented.\n This app just UI tests demo \n Check tests in \nUITestDemoUItests.m file"}];
         resultBlock(NO, theError);
     }
 }
