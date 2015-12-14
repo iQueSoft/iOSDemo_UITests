@@ -41,10 +41,12 @@
     [app.buttons[@"Login"] tap];
     
     XCUIElement *usernameTextField = app.textFields[@"UserName"];
+    XCTAssert(usernameTextField.exists);
     [usernameTextField tap];
     [usernameTextField typeText:kCorrectUserName];
     
     XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    XCTAssert(passwordSecureTextField.exists);
     [passwordSecureTextField tap];
     [passwordSecureTextField tap];
     [passwordSecureTextField typeText:kPassword];
@@ -60,10 +62,12 @@
     [app.buttons[@"Login"] tap];
     
     XCUIElement *usernameTextField = app.textFields[@"UserName"];
+    XCTAssert(usernameTextField.exists);
     [usernameTextField tap];
     [usernameTextField typeText:kIncorrectUserName];
     
     XCUIElement *passwordSecureTextField = app.secureTextFields[@"Password"];
+    XCTAssert(passwordSecureTextField.exists);
     [passwordSecureTextField tap];
     [passwordSecureTextField tap];
     [passwordSecureTextField typeText:kPassword];
@@ -73,6 +77,5 @@
     
     [[[[[[XCUIApplication alloc] init].navigationBars[@"Login"] childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Back"] elementBoundByIndex:0] tap];
 }
-
 
 @end
